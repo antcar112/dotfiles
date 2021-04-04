@@ -1,0 +1,12 @@
+[user]
+	email = antcar1992@gmail.com
+	name = Anthony Caron
+[alias]
+	br = branch
+	co = checkout
+[pull]
+  rebase = true
+[rebase]
+  autostash = true
+[init]
+	defaultBranch = master
