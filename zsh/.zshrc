@@ -9,7 +9,7 @@ alias c='clear'
 alias ls='ls -A --color=auto'
 alias ll='ls -Alp --color=auto'
 alias lt='ls --human-readable --size -1 -S --classify'
-alias open='explorer'
+alias open='explorer.exe'
 
 alias dev='cd ~/dev'
 
