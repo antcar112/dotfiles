@@ -2,8 +2,52 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Alias
-alias c="clear"
 
+# General Aliases
+alias ..='cd ..'
+alias c='clear'
+alias ls='ls -A --color=auto'
+alias ll='ls -Alp --color=auto'
+alias lt='ls --human-readable --size -1 -S --classify'
+alias open='explorer'
+
+alias dev='cd ~/dev'
+
+# Config files
+alias config='cd ~/.dotfiles'
+alias dotfiles='cd ~/.dotfiles'
+
+alias zrc='code ~/.dotfiles/zsh/.zshrc'
+alias zconfig='code ~/.dotfiles/zsh/.zshrc'
+alias gconfig='code ~/.dotfiles/git/.gitconfig'
+
+# NPM and Yarn
+alias n='npm'
+alias ns='npm start'
+alias nr='npm run'
+alias y='yarn'
+
+# Git Aliases
+alias g='git'
+
+alias br='branch'
+alias co='checkout'
+alias ci='commit'
+alias f='fetch'
+alias st='status'
+alias pl='pull --rebase origin '
+
+alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glg="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit  --graph"
+alias ga='git add .'
+alias gc='git commit -m '
+alias gca='git commit --amend '
+alias gps='git push '
+alias gs='git status'
+
+alias gb='git branch '
+alias gcb='g co -b '
+alias gd='git diff '
 
 # NVM Stuff
 export NVM_DIR="/home/anthony/.nvm"
