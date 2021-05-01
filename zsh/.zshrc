@@ -49,8 +49,12 @@ alias gb='git branch '
 alias gcb='g co -b '
 alias gd='git diff '
 
-function mkcd
-{
+function gpso {
+  branch=$(git branch | grep '*' | sed 's/* //');
+  git push -u origin $branch;
+}
+
+function mkcd {
   dir="$*";
   mkdir -p "$dir" && cd "$dir";
 }
