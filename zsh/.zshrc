@@ -49,6 +49,12 @@ alias gb='git branch '
 alias gcb='g co -b '
 alias gd='git diff '
 
+function mkcd
+{
+  dir="$*";
+  mkdir -p "$dir" && cd "$dir";
+}
+
 # NVM Stuff
 export NVM_DIR="/home/anthony/.nvm"
 source /home/anthony/.nvm/nvm.sh
