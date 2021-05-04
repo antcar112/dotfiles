@@ -3,8 +3,12 @@
 # General Aliases
 alias ..='cd ..'
 alias c='clear'
-alias ll='ls -Alp'
+alias l='ls -lFh'     #size,show type,human readable
+alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 # alias lt='ls --human-readable --size -1 -S --classify'
+
+alias grep='grep'
+
 
 # NPM and Yarn
 alias n='npm'

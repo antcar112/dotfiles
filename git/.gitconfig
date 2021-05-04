@@ -3,7 +3,10 @@
 	name = Anthony Caron
 [alias]
 	br = branch
+	ci = commit
 	co = checkout
+	f = fetch
+	st = status
 [pull]
   rebase = true
 [rebase]
