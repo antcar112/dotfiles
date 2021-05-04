@@ -9,7 +9,6 @@ alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 
 alias grep='grep'
 
-
 # NPM and Yarn
 alias n='npm'
 alias ns='npm start'
@@ -31,7 +30,7 @@ alias st='status'
 alias pl='pull --rebase origin'
 
 alias ga='git add .'
-alias gb='git branch --sort=-committerdate'
+alias gb='git --no-pager branch --sort=-committerdate' # Sorted by latest, don't open vim
 alias gc='git commit -m'
 alias gca='git commit --amend'
 alias gco='git checkout'
