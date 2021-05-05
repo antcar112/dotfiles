@@ -1,15 +1,15 @@
 [user]
-	email = antcar1992@gmail
-	name = Anthony Caron
+  email = antcar1992@gmail
+  name = Anthony Caron
 [alias]
-	br = branch
-	ci = commit
-	co = checkout
-	f = fetch
-	st = status
+  br = branch
+  ci = commit
+  co = checkout
+  f = fetch
+  st = status
 [pull]
   rebase = true
 [rebase]
   autostash = true
 [init]
-	defaultBranch = master
+  defaultBranch = master
