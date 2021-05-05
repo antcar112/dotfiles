@@ -7,6 +7,7 @@ alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 # alias lt='ls --human-readable --size -1 -S --classify'
 alias grep='grep --color'
+alias path='echo -e ${PATH//:/\\n}'
 
 alias dev='cd ~/dev'
 
@@ -26,6 +27,8 @@ alias ni='npm install'
 alias y='yarn'
 alias ys='yarn start'
 alias yr='yarn run'
+
+alias vi=vim
 
 # Git
 alias g='git'
