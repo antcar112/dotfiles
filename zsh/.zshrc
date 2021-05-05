@@ -4,13 +4,12 @@ if [[ -f "$LOCAL_ENV" ]]; then
   source "$LOCAL_ENV"
 fi
 
-# Export NVM
-export NVM_DIR="$HOME/.nvm"
-# This loads nvm
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" 
-
-# Path to oh-my-zsh installation
-export ZSH="/Users/anthonycaron/.oh-my-zsh"
+# Load OS specific files
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  source ~/dotfiles/zsh/ios.zsh
+elif [[ "$OSTYPE" == "linux"* ]]; then
+  source ~/dotfiles/zsh/linux.zsh
+fi
 
 # oh-my-zsh theme
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -39,9 +38,3 @@ SAVEHIST=10000
 setopt SHARE_HISTORY
 
 source ~/dotfiles/zsh/alias.zsh
-
-# Load OS specific aliases
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  # iOS
-  source ~/dotfiles/zsh/alias-ios.zsh
-fi

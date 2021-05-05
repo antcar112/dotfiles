@@ -6,8 +6,16 @@ alias c='clear'
 alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 # alias lt='ls --human-readable --size -1 -S --classify'
+alias grep='grep --color'
 
-alias grep='grep'
+alias dev='cd ~/dev'
+
+# Config files
+alias cf='cd ~/dotfiles'
+alias cfg='code ~/.gitconfig'
+alias cfv='code ~/.vimrc'
+alias cfz='code ~/.zshrc'
+alias cfa='code ~/dotfiles/zsh/alias.zsh'
 
 # NPM and Yarn
 alias n='npm'
