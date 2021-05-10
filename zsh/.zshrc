@@ -1,8 +1,6 @@
 # Set local environment variables
 LOCAL_ENV="$HOME/.config/.env.sh"
-if [[ -f "$LOCAL_ENV" ]]; then
-  source "$LOCAL_ENV"
-fi
+[ -f "$LOCAL_ENV" ] && source "$LOCAL_ENV"
 
 # Load OS specific files
 if [[ "$OSTYPE" == "darwin"* ]]; then
