@@ -3,11 +3,14 @@
 # General Aliases
 alias ..='cd ..'
 alias c='clear'
+# alias ls='ls --group-directories-first'
 alias l='ls -lFh'     #size,show type,human readable
 alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 # alias lt='ls --human-readable --size -1 -S --classify'
 alias grep='grep --color'
 alias path='echo -e ${PATH//:/\\n}'
+
+alias ref='source ~/.zshrc'
 
 alias dev='cd ~/dev'
 
@@ -16,7 +19,7 @@ alias cf='cd ~/dotfiles'
 alias cfg='code ~/.gitconfig'
 alias cfv='code ~/.vimrc'
 alias cfz='code ~/.zshrc'
-alias cfa='code ~/dotfiles/zsh/alias.zsh'
+alias cfa='code ~/dotfiles/zsh/alias.sh'
 
 # NPM and Yarn
 alias n='npm'
@@ -28,7 +31,7 @@ alias y='yarn'
 alias ys='yarn start'
 alias yr='yarn run'
 
-alias vi=vim
+alias v=vim
 
 # Git
 alias g='git'

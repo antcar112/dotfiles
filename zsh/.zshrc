@@ -6,9 +6,9 @@ fi
 
 # Load OS specific files
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  source ~/dotfiles/zsh/ios.zsh
+  source ~/dotfiles/zsh/ios.sh
 elif [[ "$OSTYPE" == "linux"* ]]; then
-  source ~/dotfiles/zsh/linux.zsh
+  source ~/dotfiles/zsh/linux.sh
 fi
 
 # oh-my-zsh theme
@@ -37,4 +37,4 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt SHARE_HISTORY
 
-source ~/dotfiles/zsh/alias.zsh
+source ~/dotfiles/zsh/alias.sh
