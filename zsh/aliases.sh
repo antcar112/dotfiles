@@ -10,7 +10,7 @@ alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 alias grep='grep --color'
 alias path='echo -e ${PATH//:/\\n}'
 
-alias ref='source ~/.zshrc'
+alias reset='source ~/.zshrc'
 
 alias dev='cd ~/dev'
 
@@ -19,7 +19,9 @@ alias cf='cd ~/dotfiles'
 alias cfg='code ~/.gitconfig'
 alias cfv='code ~/.vimrc'
 alias cfz='code ~/.zshrc'
-alias cfa='code ~/dotfiles/zsh/alias.sh'
+alias cfa='code ~/dotfiles/zsh/aliases.sh'
+alias cff='code ~/dotfiles/zsh/functions.sh'
+alias cfomz='code $ZSH/oh-my-zsh.sh'
 
 # NPM and Yarn
 alias n='npm'
@@ -57,13 +59,3 @@ alias gps='git push'
 alias gs='git status -s'
 
 alias gcb='git pull --rebase origin; git checkout -b'
-
-function gpso {
-  branch=$(git branch | grep '*' | sed 's/* //');
-  git push -u origin $branch;
-}
-
-function mkcd {
-  dir="$*";
-  mkdir -p "$dir" && cd "$dir";
-}

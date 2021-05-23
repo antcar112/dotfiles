@@ -27,12 +27,7 @@ plugins=(
 
 # oh-my-zsh config
 source $ZSH/oh-my-zsh.sh
-alias cfomz='code $ZSH/oh-my-zsh.sh'
 
-# Save history & share across terminals
-HISTFILE="$HOME/.zsh_history"
-HISTSIZE=10000
-SAVEHIST=10000
-setopt SHARE_HISTORY
-
-source ~/dotfiles/zsh/alias.sh
+source ~/dotfiles/zsh/aliases.sh
+source ~/dotfiles/zsh/config.sh
+source ~/dotfiles/zsh/functions.sh

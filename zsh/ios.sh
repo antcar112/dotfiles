@@ -4,6 +4,3 @@ export NVM_DIR="$HOME/.nvm"
 
 # Path to oh-my-zsh installation
 export ZSH="/Users/anthonycaron/.oh-my-zsh"
-
-# Alias
-alias cff='code ~/.config/fish/config.fish'
