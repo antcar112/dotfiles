@@ -31,3 +31,5 @@ source $ZSH/oh-my-zsh.sh
 source ~/dotfiles/zsh/aliases.sh
 source ~/dotfiles/zsh/config.sh
 source ~/dotfiles/zsh/functions.sh
+
+[ -f "$HOME/dotfiles/config/lf/lfcd.sh" ] && source "$HOME/dotfiles/config/lf/lfcd.sh"
