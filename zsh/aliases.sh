@@ -16,12 +16,14 @@ alias dev='cd ~/dev'
 
 # Config files
 alias cf='cd ~/dotfiles'
+alias dotfiles='cd ~/dotfiles'
 alias cfg='code ~/.gitconfig'
 alias cfv='code ~/.vimrc'
 alias cfz='code ~/.zshrc'
 alias cfa='code ~/dotfiles/zsh/aliases.sh'
 alias cff='code ~/dotfiles/zsh/functions.sh'
 alias cfomz='code $ZSH/oh-my-zsh.sh'
+alias cfenv='code ~/.config/.env.sh'
 
 # NPM and Yarn
 alias n='npm'

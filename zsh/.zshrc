@@ -1,7 +1,3 @@
-# Set local environment variables
-LOCAL_ENV="$HOME/.config/.env.sh"
-[ -f "$LOCAL_ENV" ] && source "$LOCAL_ENV"
-
 # Load OS specific files
 if [[ "$OSTYPE" == "darwin"* ]]; then
   source ~/dotfiles/zsh/ios.sh
@@ -33,3 +29,15 @@ source ~/dotfiles/zsh/config.sh
 source ~/dotfiles/zsh/functions.sh
 
 [ -f "$HOME/dotfiles/config/lf/lfcd.sh" ] && source "$HOME/dotfiles/config/lf/lfcd.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Set local environment variables
+LOCAL_ENV="$HOME/.config/.env.sh"
+[ -f "$LOCAL_ENV" ] && source "$LOCAL_ENV"
+
+# Set local environment variables
+PRIVATE="$HOME/dotfiles/zsh/private.sh"
+[ -f "$PRIVATE" ] && source "$PRIVATE"
