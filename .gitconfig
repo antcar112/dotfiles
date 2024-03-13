@@ -1,6 +1,11 @@
 [user]
   email = antcar1992@gmail.com
   name = Anthony Caron
+# Set work specific email
+# [includeIf "gitdir:~/dev/"]
+#   path = ~/dev/.gitconfig
+[include]
+  path = ~/dotfiles/private.gitconfig
 [alias]
   br = branch
   ci = commit
@@ -13,6 +18,7 @@
   autostash = true
 [core]
   ignoreCase = false
+  editor = code -w
 [init]
   defaultBranch = main
 [credential]
