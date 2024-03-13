@@ -4,9 +4,7 @@
 .DS_Store
 
 config
-git
 globals
-vim
 vscode
 zsh
 

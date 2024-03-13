@@ -1,2 +1,4 @@
 .DS_Store
-zsh/private.sh
+
+private.sh
+private.gitconfig

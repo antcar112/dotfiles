@@ -1,6 +1,3 @@
-# # Load OS specific files
-# # source ~/dotfiles/zsh/ios.sh
-
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 # Path to oh-my-zsh installation
@@ -14,14 +11,10 @@ ENABLE_CORRECTION="true"
 
 # oh-my-zsh plugins
 plugins=(
-  # brew
+  fnm
   git
-  # node
-  # npm
-  # nvm
-  # macos
-  # zsh-autosuggestions
-  # zsh-syntax-highlighting
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 # oh-my-zsh config
@@ -41,6 +34,6 @@ PRIVATE="$HOME/dotfiles/zsh/private.sh"
 [ -s "/Users/acaron/.bun/_bun" ] && source "/Users/acaron/.bun/_bun"
 
 # fnm
-export PATH="/Users/acaron/Library/Application Support/fnm:$PATH"
+# export PATH="/Users/acaron/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
 eval "$(fnm env --use-on-cd)"
