@@ -11,7 +11,9 @@
   rebase = true
 [rebase]
   autostash = true
+[core]
+  ignoreCase = false
 [init]
-  defaultBranch = master
+  defaultBranch = main
 [credential]
 	helper = store
