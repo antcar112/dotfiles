@@ -1,5 +1,10 @@
-# Load OS specific files
-source ~/dotfiles/zsh/ios.sh
+# # Load OS specific files
+# # source ~/dotfiles/zsh/ios.sh
+
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+# Path to oh-my-zsh installation
+export ZSH="/Users/acaron/.oh-my-zsh"
 
 # oh-my-zsh theme
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -26,7 +31,7 @@ source ~/dotfiles/zsh/aliases.sh
 source ~/dotfiles/zsh/config.sh
 source ~/dotfiles/zsh/functions.sh
 
-[ -f "$HOME/dotfiles/config/lf/lfcd.sh" ] && source "$HOME/dotfiles/config/lf/lfcd.sh"
+# [ -f "$HOME/dotfiles/config/lf/lfcd.sh" ] && source "$HOME/dotfiles/config/lf/lfcd.sh"
 
 # Set local environment variables
 PRIVATE="$HOME/dotfiles/zsh/private.sh"
