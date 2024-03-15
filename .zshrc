@@ -1,34 +1,18 @@
-export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+# export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-# Path to oh-my-zsh installation
-export ZSH="/Users/acaron/.oh-my-zsh"
+# Save history & share across terminals
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE="$HOME/.cache/zsh/history"
+setopt SHARE_HISTORY
 
-# oh-my-zsh theme
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="amuse"
-CASE_SENSITIVE="true"
-ENABLE_CORRECTION="true"
-
-# oh-my-zsh plugins
-plugins=(
-  fnm
-  git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
-
-# oh-my-zsh config
-source $ZSH/oh-my-zsh.sh
-
-source ~/dotfiles/zsh/aliases.sh
-source ~/dotfiles/zsh/config.sh
-source ~/dotfiles/zsh/functions.sh
-
-# [ -f "$HOME/dotfiles/config/lf/lfcd.sh" ] && source "$HOME/dotfiles/config/lf/lfcd.sh"
-
-# Set local environment variables
-PRIVATE="$HOME/dotfiles/zsh/private.sh"
-[ -f "$PRIVATE" ] && source "$PRIVATE"
+# custom shell tools
+export HOMEBREW_PREFIX=$(brew --prefix)
+source $HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source $HOMEBREW_PREFIX/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+eval "$(starship init zsh)"
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
 
 # bun completions
 [ -s "/Users/acaron/.bun/_bun" ] && source "/Users/acaron/.bun/_bun"
@@ -37,3 +21,10 @@ PRIVATE="$HOME/dotfiles/zsh/private.sh"
 # export PATH="/Users/acaron/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
 eval "$(fnm env --use-on-cd)"
+
+source ~/dotfiles/zsh/aliases.sh
+source ~/dotfiles/zsh/functions.sh
+
+# Set local environment variables
+PRIVATE="$HOME/dotfiles/zsh/private.sh"
+[ -f "$PRIVATE" ] && source "$PRIVATE"

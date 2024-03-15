@@ -15,20 +15,29 @@ brew cask install iterm2
 touch ~/.hushlogin
 
 brew install git
-# Clone this repo and link
+brew install stow
 
-# OMZ
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+brew install bat
+brew install eza
+brew install fnm
+brew install fzf
+brew install tmux
+brew install zoxide
 
-brew install --cask visual-studio-code
-brew install --cask sublime-text
+brew install starship
+brew install zsh-autocomplete
+brew install zsh-fast-syntax-highlighting
 
-brew install --cask alfred
-brew install alt-tab
+brew install --cask alt-tab
 brew install --cask firefox
+brew install --cask hiddenbar
+brew install --cask iterm2
+brew install --cask itsycal
+brew install --cask rectangle
+brew install --cask reflex
 brew install --cask spotify
-brew install --cask spotmenu
-brew install --cask beardedspice
+brew install --cask stats
+brew install --cask sublime-text
+brew install --cask visual-studio-code
+
 ```

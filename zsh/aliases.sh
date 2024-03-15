@@ -1,10 +1,15 @@
 # Alias
 
 # General Aliases
+alias cat='bat'
+alias cd='z'
+alias ls='eza'
+alias ll='eza -alh'
+alias tree='eza --tree'
+
+alias ~='cd ~'
 alias ..='cd ..'
 alias c='clear'
-alias l='ls -lFh'     #size,show type,human readable
-alias la='ls -lAFh'   #long list,show almost all,show type,human readable
 alias grep='grep --color'
 alias path='echo -e ${PATH//:/\\n}'
 alias pip='pip3'
@@ -14,16 +19,11 @@ alias reset='source ~/.zshrc'
 alias dev='cd ~/dev'
 
 # Config files
-# alias cf='cd ~/dotfiles'
 # alias df='cd ~/dotfiles'
 alias dotfiles='cd ~/dotfiles'
 # alias cfg='code ~/.gitconfig'
 # alias cfv='code ~/.vimrc'
 # alias cfz='code ~/.zshrc'
-# alias cfa='code ~/dotfiles/zsh/aliases.sh'
-# alias cff='code ~/dotfiles/zsh/functions.sh'
-# alias cfomz='code $ZSH/oh-my-zsh.sh'
-# alias cfenv='code ~/.config/.env.sh'
 
 # NPM and Yarn
 alias n='npm'
