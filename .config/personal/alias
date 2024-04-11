@@ -1,31 +1,30 @@
-# Alias
+#!/usr/bin/env bash
 
-# General Aliases
+# General / QoL
+alias c='clear'
+alias reset='source ~/.zshrc'
+alias grep='grep --color'
+alias path='echo -e ${PATH//:/\\n}'
+
+# Tools
 alias cat='bat'
 alias cd='z'
 alias ls='eza'
 alias ll='eza -alh'
 alias tree='eza --tree'
+alias nvm=fnm
+alias v=$VIM
 
+# alias python="python3"
+# alias pip='pip3'
+
+# Faster CD
 alias ~='cd ~'
 alias ..='cd ..'
-alias c='clear'
-alias grep='grep --color'
-alias path='echo -e ${PATH//:/\\n}'
-alias pip='pip3'
-
-alias reset='source ~/.zshrc'
-
 alias dev='cd ~/dev'
+alias dotfiles='cd $DOTFILES'
 
-# Config files
-# alias df='cd ~/dotfiles'
-alias dotfiles='cd ~/dotfiles'
-# alias cfg='code ~/.gitconfig'
-# alias cfv='code ~/.vimrc'
-# alias cfz='code ~/.zshrc'
-
-# NPM and Yarn
+# Package Managers
 alias n='npm'
 alias ns='npm start'
 alias nr='npm run'
@@ -41,9 +40,6 @@ alias yt='yarn test'
 alias ya='yarn add'
 alias yad='yarn add -D'
 alias yu='yarn upgrade-interactive'
-
-alias v=vim
-alias nvm=fnm
 
 # Git
 alias g='git'

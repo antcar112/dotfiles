@@ -12,6 +12,8 @@
   co = checkout
   f = fetch
   st = status
+[push]
+  autoSetupRemote = true
 [pull]
   rebase = true
 [rebase]

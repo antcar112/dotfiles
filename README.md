@@ -2,34 +2,39 @@
 
 Repo to manage and sync custom dotfiles across multiple machines. This repo uses the [GNU Stow](https://www.gnu.org/software/stow/) tool. A good intro to using Stow to manage symlinks can be [found here](https://www.youtube.com/watch?v=y6XCebnB9gs&list=PLB78HyNbpjPXuqm0440-UyknjiRqPhU55).
 
-## Required tools
+## Install
 
-Prior to setup, you'll need the following tools installed
+1. Install [Homebrew](https://brew.sh/)
 
-### Git
+   ```sh
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
 
-```sh
-brew install stow
-```
+2. Install Git & Stow
 
-### Stow
+   ```sh
+   brew install git
+   brew install stow
+   ```
 
-```sh
-brew install stow
-```
+3. Clone this repo into `~` directory
 
-1. Clone repo into home directory
-
-2. Run stow in the dotfiles repo.
+4. Run Stow in `dotfiles` directory
 
    ```sh
    cd ~/dotfiles
-   stow .
+   stow . --no-folding
    ```
 
-3. Create any private files (if needed)
+5. Run [Brewfile](https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f#basic-brew-bundle)
 
-```sh
- touch ~/dotfiles/zsh/private.sh
- touch ~/dotfiles/private.gitconfig
-```
+   ```sh
+   brew bundle install
+   ```
+
+6. Create Private dotfiles (if needed).
+
+   ```sh
+   touch ~/dotfiles/zsh/private.sh
+   touch ~/dotfiles/private.gitconfig
+   ```

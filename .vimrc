@@ -13,4 +13,5 @@ if has('mouse')
 endif
 
 " Display line numbers
-set number
+set relativenumber
+
