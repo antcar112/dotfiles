@@ -20,7 +20,7 @@
   autostash = true
 [core]
   ignoreCase = false
-  editor = code -w
+  editor = nvim
 [init]
   defaultBranch = main
 [credential]

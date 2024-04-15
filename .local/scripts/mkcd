@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+ 
+ dir="$*";
+ mkdir -p "$dir" && cd "$dir";

@@ -3,10 +3,6 @@
 
 .DS_Store
 
-config
 globals
-vscode
-zsh
-private.*
-
+private.gitconfig
 README.md

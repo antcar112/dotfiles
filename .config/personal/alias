@@ -2,7 +2,7 @@
 
 # General / QoL
 alias c='clear'
-alias reset='source ~/.zshrc'
+alias reset='source ~/.config/zsh/.zshrc'
 alias grep='grep --color'
 alias path='echo -e ${PATH//:/\\n}'
 

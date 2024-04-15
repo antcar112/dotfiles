@@ -1,10 +1,10 @@
-echo "Hello from .zprofile"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache" 
+VIM="nvim"
 
-export CONFIG_HOME="$HOME/.config"
-export CACHE_HOME="$HOME/.cache" 
-VIM="vim"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
-PERSONAL=$CONFIG_HOME/personal
+PERSONAL=$XDG_CONFIG_HOME/personal
 for i in `find -L $PERSONAL`; do
     source $i
 done

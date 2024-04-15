@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+ 
+branch=$(git branch | grep '*' | sed 's/* //');
+git push -u origin $branch;
