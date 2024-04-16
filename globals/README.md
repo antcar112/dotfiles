@@ -77,8 +77,8 @@ defaults write com.apple.dock mineffect -string "scale"
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
-# Remove the auto-hiding Dock delay
-defaults write com.apple.dock autohide-delay -float 0
+# Set the auto-hiding Dock delay
+defaults write com.apple.dock autohide-delay -float 3000
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
 

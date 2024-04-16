@@ -1,5 +1,4 @@
 # export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
-
 # Save history & share across terminals
 HISTSIZE=10000
 SAVEHIST=10000
