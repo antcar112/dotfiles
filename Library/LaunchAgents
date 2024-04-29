@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.koekeishiya.yabai</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/yabai</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/zero/.nvm/versions/node/v12.22.12/bin:/Users/zero/go/bin:/usr/local/opt/libiconv/bin:/Users/zero/.jenv/shims:/Users/zero/.jenv/bin:/usr/local/Cellar/htpdate/1.3.4/sbin/:/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/usr/local/opt/bison/bin:/Applications/Sublime Text.app/Contents/SharedSupport/bin:/usr/local/opt/openssl@3/bin:/Users/zero/anaconda3/bin:/Users/zero/anaconda3/condabin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/TeX/texbin:/usr/local/go/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Applications/Fortify/Fortify_SCA_and_Apps_22.1.0/bin:/usr/local/bin</string>
+    </dict>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+ 	     <false/>
+ 	     <key>Crashed</key>
+ 	     <true/>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/tmp/yabai_zero.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/yabai_zero.err.log</string>
+    <key>ProcessType</key>
+    <string>Interactive</string>
+    <key>Nice</key>
+    <integer>-20</integer>
+</dict>
+</plist>

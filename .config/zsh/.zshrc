@@ -5,6 +5,10 @@ SAVEHIST=10000
 HISTFILE="$XDG_CACHE_HOME/zsh/history"
 setopt SHARE_HISTORY
 
+# export NVIM_APPNAME="josean-nvim"
+# export NVIM_APPNAME="dmmulroy-nvim"
+export NVIM_APPNAME="lazynvim"
+
 # TODO, try this stuff out
 # https://github.com/ThePrimeagen/.dotfiles/blob/master/uwuntu/.config/personal/env
 # https://github.com/ThePrimeagen/.dotfiles/blob/master/zsh/.zsh_profile
@@ -17,7 +21,8 @@ source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # you may need to add the following to your .zshenv:
   # export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 
-eval "$(starship init zsh)"eval "$(fzf --zsh)"
+eval "$(starship init zsh)"
+eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
 # bun completions
