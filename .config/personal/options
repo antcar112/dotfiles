@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Auto correct mistakes
+setopt correct
+
+# No beep
+setopt nobeep
+
+# Append history instead of overwrite
+setopt appendhistory
+
+# If command is duplicated in history, remove the older one
+setopt histignorealldups
+
+# If only directory name is typed, cd there
+setopt autocd
+
+# save commands are added to history immediately, otherwise only when shell exits
+setopt inc_append_history
+
+# Don't save commands that start with a space
+setopt histignorespace

@@ -1,0 +1,80 @@
+gui:
+  timeFormat: "02 Jan 06" # https://pkg.go.dev/time#Time.Format
+  shortTimeFormat: "3:04PM"
+  theme:
+    activeBorderColor:
+      - blue
+      - bold
+  nerdFontsVersion: "3"
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
+    # pager: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+
+customCommands:
+  - key: "G" # TODO: Need to setup gitlab CLI to get this to work
+    description: "Go to MR in gitlab"
+    command: "glab mr view -w {{.SelectedLocalBranch.UpstreamBranch}}"
+    context: "localBranches"
+    stream: true
+  - key: "F"
+    description: "Prune merged branches"
+    command: "git fetch --prune"
+    context: "localBranches"
+    loadingText: "Pruning..."
+    stream: true
+  - key: "b"
+    description: "Prune local branches that have been merged to master"
+    command: "git branch --merged release-peregrine | grep -v '^[ *]*release-peregrine$' | xargs -r git branch -d"
+    context: "localBranches"
+    loadingText: "Pruning..."
+  - key: "C"
+    command: "git commit -m ''"
+    description: "Commit with commitizen"
+    context: "files"
+    loadingText: "Opening commitizen commit tool"
+    subprocess: true
+    showOutput: true
+  - key: "N"
+    context: "localBranches"
+    description: "Create a new branch with JIRA ticket info"
+    prompts:
+      - type: "menu"
+        title: "What kind of branch is it?"
+        key: "BranchType"
+        options:
+          - name: "feat"
+            description: "a feature branch"
+            value: "feat"
+          - name: "fix"
+            description: "a hotfix branch"
+            value: "fix"
+          - name: "docs"
+            description: "a docs branch"
+            value: "docs"
+          - name: "test"
+            description: "a test branch"
+            value: "test"
+          - name: "release"
+            description: "a release branch"
+            value: "release"
+      - type: "input"
+        title: "What is the ticket number"
+        key: "TicketNumber"
+        initialValue: "WEB-"
+      - type: "input"
+        title: "What is the new branch name?"
+        key: "BranchName"
+        initialValue: ""
+      - type: "menu"
+        title: "Delimiter"
+        key: "Delimiter"
+        options:
+          - name: "/"
+            value: "/"
+          - name: "-"
+            value: "-"
+    command: "git co -b {{.Form.BranchType}}{{.Form.Delimiter}}{{.Form.TicketNumber}}{{.Form.Delimiter}}{{.Form.BranchName}}"
+    loadingText: "Creating branch"

@@ -102,7 +102,6 @@
   "typescript.updateImportsOnFileMove.enabled": "never",
   "terminal.integrated.fontSize": 15,
   "workbench.settings.editor": "json",
-  "workbench.settings.useSplitJSON": false,
   "workbench.settings.openDefaultSettings": false,
   "workbench.startupEditor": "newUntitledFile",
   // "workbench.editor.enablePreview": false,
@@ -214,5 +213,6 @@
     // toggle comment selection
     { "before": ["leader", "/"], "commands": ["editor.action.commentLine"] }
   ],
-  "breadcrumbs.enabled": false
+  "breadcrumbs.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open"
 }

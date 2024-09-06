@@ -4,7 +4,7 @@ import = ["~/.config/alacritty/themes/catppuccin-macchiato.toml"]
 TERM = "xterm-256color"
 
 [window]
-decorations = "none"
+decorations = "buttonless"
 padding.x = 10
 padding.y = 10
 

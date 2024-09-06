@@ -2,27 +2,29 @@
 
 # General / QoL
 alias c='clear'
-alias reset='source ~/.config/zsh/.zshrc'
-alias grep='grep --color'
+alias reset='source ~/.config/zsh/.zprofile && source ~/.config/zsh/.zshrc'
+alias grep='grep --color="auto"'
 alias path='echo -e ${PATH//:/\\n}'
 
 # Tools
 alias cat='bat'
 alias cd='z'
-alias ls='eza'
-alias ll='eza -alh'
-alias tree='eza --tree'
+alias ls="eza --color=always"
+alias ll='eza -alh --color=always --git --no-user --icons=always'
+alias tree='eza -a --tree --level 2 --ignore-glob ".git|.DS_Store"'
 alias nvm=fnm
 alias v=$VIM
+alias vim=$VIM
 
 # alias python="python3"
 # alias pip='pip3'
 
 # Faster CD
-alias ~='cd ~'
-alias ..='cd ..'
 alias dev='cd ~/dev'
 alias dotfiles='cd $DOTFILES'
+
+# Tmux
+alias t='tmux'
 
 # Package Managers
 alias n='npm'
@@ -31,21 +33,27 @@ alias nr='npm run'
 alias nt='npm test'
 alias ni='npm install'
 alias nid='npm install -D'
-alias nm='npm run start:mock'
 
 alias y='yarn'
 alias ys='yarn start'
-alias ym='yarn start:mock'
 alias yt='yarn test'
 alias ya='yarn add'
 alias yad='yarn add -D'
 alias yu='yarn upgrade-interactive'
 
+alias pi='pnpm install'
+alias pa='pnpm add'
+alias pr='pnpm run'
+alias pd='pnpm dev'
+alias px='pnpm dlx'
+alias pu='pnpm update'
+alias pun='pnpm remove'
+
 # Git
 alias g='git'
 alias ga='git add .'
 alias gb='git --no-pager branch --sort=-committerdate' # Sorted by latest, don't open vim
-alias gc='git commit -m'
+alias gc='git commit'
 alias gca='git commit --amend'
 alias gco='git checkout'
 alias gd='git diff'
