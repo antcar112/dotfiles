@@ -6,25 +6,23 @@ gui:
       - blue
       - bold
   nerdFontsVersion: "3"
-
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never
-    # pager: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
-
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
+      # pager: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
 customCommands:
   - key: "G" # TODO: Need to setup gitlab CLI to get this to work
     description: "Go to MR in gitlab"
     command: "glab mr view -w {{.SelectedLocalBranch.UpstreamBranch}}"
     context: "localBranches"
-    stream: true
+    output: log
   - key: "F"
     description: "Prune merged branches"
     command: "git fetch --prune"
     context: "localBranches"
     loadingText: "Pruning..."
-    stream: true
+    output: log
   - key: "b"
     description: "Prune local branches that have been merged to master"
     command: "git branch --merged release-peregrine | grep -v '^[ *]*release-peregrine$' | xargs -r git branch -d"
@@ -35,8 +33,7 @@ customCommands:
     description: "Commit with commitizen"
     context: "files"
     loadingText: "Opening commitizen commit tool"
-    subprocess: true
-    showOutput: true
+    output: terminal
   - key: "N"
     context: "localBranches"
     description: "Create a new branch with JIRA ticket info"

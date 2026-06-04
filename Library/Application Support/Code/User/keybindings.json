@@ -28,15 +28,15 @@
   // FILE TREE
   {
     "command": "workbench.action.toggleSidebarVisibility",
-    "key": "ctrl+n"
+    "key": "ctrl+e"
   },
   {
     "command": "workbench.files.action.focusFilesExplorer",
-    "key": "ctrl+n",
-    "when": "editorTextFocus"
+    "key": "ctrl+e",
+    "when": "!filesExplorerFocus"
   },
   {
-    "key": "n",
+    "key": "a",
     "command": "explorer.newFile",
     "when": "filesExplorerFocus && !inputFocus"
   },
@@ -112,5 +112,26 @@
     "key": "ctrl+k",
     "command": "list.focusUp",
     "when": "listFocus && !inputFocus"
+  },
+  // WORD WRAPPING
+  {
+    "key": "up",
+    "command": "cursorUp",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "down",
+    "command": "cursorDown",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "k",
+    "command": "cursorUp",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "j",
+    "command": "cursorDown",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
   }
 ]

@@ -68,8 +68,7 @@
     "javascript": "javascriptreact",
     "typescript": "typescriptreact"
   },
-  // "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
-  // "emmet.triggerExpansionOnTab": true,
+  "emmet.triggerExpansionOnTab": true,
   "eslint.codeActionsOnSave.mode": "problems",
   "eslint.validate": [
     "javascript",

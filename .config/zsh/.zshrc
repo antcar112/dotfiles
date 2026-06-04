@@ -107,3 +107,8 @@ _fzf_comprun() {
 
 # fnm
 eval "$(fnm env --use-on-cd)"
+
+export PATH="/Users/acaron/Library/Python/3.9/bin:$PATH"
+
+# Added by consumer webapps dx
+export PATH="/Users/acaron/.local/bin:$PATH"

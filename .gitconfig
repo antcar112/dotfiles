@@ -2,10 +2,10 @@
   email = antcar1992@gmail.com
   name = Anthony Caron
 # Set work specific email
-# [includeIf "gitdir:~/dev/"]
-#   path = ~/dev/.gitconfig
-[include]
-  path = ~/dotfiles/private.gitconfig
+[includeIf "gitdir:~/dev/"]
+  path = ~/dev/.gitconfig
+; [include]
+;   path = ~/dotfiles/private.gitconfig
 	; path = PATH/TO/delta/themes/catppuccin.gitconfig
 
 [credential]
@@ -31,6 +31,8 @@
   autostash = true
 [init]
   defaultBranch = main
+[rerere]
+	enabled = true
 
 [delta]
   navigate = true 
@@ -77,3 +79,4 @@
 		bold yellow => syntax "#575253"
 	# Should match the name of the bat theme
 	syntax-theme = Catppuccin Macchiato
+
